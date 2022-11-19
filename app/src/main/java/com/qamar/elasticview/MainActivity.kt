@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String) {
     ElasticView {
-        Text(text = "Hello $name!", modifier = Modifier.align(Alignment.Center))
+        Text(text = "Hello $name!")
     }
 }
 
