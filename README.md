@@ -27,8 +27,8 @@ Update your module level `build.gradle` file with the following dependency.
 
 ```groovy
 dependencies {
-	        implementation 'com.github.qamarelsafadi:ElasticView:v0.2'
-            }
+  implementation 'com.github.qamarelsafadi:ElasticView:v0.2'
+ }
 ```
 
 # How to use
