@@ -14,7 +14,7 @@ import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 
-fun Modifier.elasticEffect() = composed {
+fun Modifier.elasticEffect(onClick: () -> Unit) = composed {
     var buttonState by remember { mutableStateOf(ElasticState.None) }
     val scale by animateFloatAsState(if (buttonState == ElasticState.Pressed) 0.95f else 1f)
     this.graphicsLayer {
@@ -25,11 +25,11 @@ fun Modifier.elasticEffect() = composed {
             awaitPointerEventScope {
                 buttonState = if (buttonState == ElasticState.Pressed) {
                     waitForUpOrCancellation()
+                    onClick()
                     ElasticState.None
                 } else {
                     awaitFirstDown(false)
                     ElasticState.Pressed
                 }
-            }
+            }}
         }
-}

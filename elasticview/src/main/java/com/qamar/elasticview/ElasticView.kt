@@ -7,9 +7,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun ElasticView(modifier: Modifier? = Modifier, content: @Composable BoxScope.() -> Unit) {
+fun ElasticView(modifier: Modifier? = Modifier,
+                onClick: () -> Unit,
+                content: @Composable BoxScope.() -> Unit) {
     Box(
-        modifier = modifier!!.elasticEffect(),
+        modifier = modifier!!.elasticEffect { onClick() },
         contentAlignment = Alignment.Center
     )
     {
