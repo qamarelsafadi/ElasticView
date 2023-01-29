@@ -1,5 +1,11 @@
 # ElasticView
+
 ElasticView is a JetpackCompose library that will help you add an Elastic Effect for your all kind of widgets
+
+
+
+[![Maven Central](https://user-images.githubusercontent.com/30949634/215348156-3c2b1e68-ae89-425c-8c9e-075b2ffd7925.svg)](https://androidweekly.net/issues/issue-555)
+
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/30949634/202576138-c5f09b7b-bbae-4e7e-8f75-d04657372c01.gif" width="30%" height="30%"/>
